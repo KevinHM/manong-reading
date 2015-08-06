@@ -100,7 +100,6 @@
     }else{
         [self.WKWebPageView goBack];
     }
-    
 }
 
 -(void)closeCurrentView:(UIButton *)sender
@@ -152,7 +151,6 @@
     [self.WKWebProgress setProgress:0.0f];
     self.requestURL = webView.URL;
     self.actionNumber += 1;
-    
     ManongTag *tag = [self.manager fetchManong:@"ManongTag" fetchKey:@"tagKey" fetchValue:self.currentMC.wkContrsationKey];
     tag.tagCount = [NSNumber numberWithInteger:[tag.tagCount integerValue] + 1];
     [self.manager saveData];
@@ -189,6 +187,7 @@
 -(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)actionShare:(UIBarButtonItem *)sender {
@@ -266,7 +265,6 @@
     [self.WKWebPageView removeObserver:self forKeyPath:@"URL"];
     [self.WKWebPageView removeObserver:self forKeyPath:@"canGoBack"];
     [self.WKWebPageView removeObserver:self forKeyPath:@"canGoForward"];
-//    NSLog(@"%@",NSStringFromCGSize(self.WKWebPageView.scrollView.contentSize));
     NSLog(@"web page view controller 销毁");
 }
 

@@ -1,6 +1,6 @@
 ## manong reading
 
-> Tag v1.2
+> Tag v1.2.1
 
 ![](green-46180_640.png)
 
@@ -17,6 +17,20 @@
 - An iPhone running iOS 8.0+
 - Xcode 6.3
 - An Apple iOS developer account
+
+需要导入如下框架（import framework）
+
+- WebKit.framework
+- libc++.dylib
+- libsqlite3.0.dylib
+- libz.dylib
+- SystemConfiguration.framework
+- libxml2.2.dylib
+- CoreData.framework
+
+> pod install
+
+需要跑真机，模拟器无法运行（run iOS Device）
 
 ##Build with Xcode （在Xcode中编译）
 
@@ -107,6 +121,12 @@ A simple and beautiful chart lib used in Piner and CoinsMan for iOS
 Harness the power of AutoLayout NSLayoutConstraints with a simplified, chainable and expressive syntax. Supports iOS and OSX Auto Layout
 
 [Masonry](https://github.com/SnapKit/Masonry)
+
+##AFNetworking
+
+A delightful iOS and OS X networking framework
+
+[AFNetworking](https://github.com/AFNetworking/AFNetworking)
 
 ##效果图
 
